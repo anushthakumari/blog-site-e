@@ -1,0 +1,23 @@
+.conatiner {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.comment-title {
+  font-weight: bold;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.comment {
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 10px;
+}
