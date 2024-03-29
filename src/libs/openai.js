@@ -1,10 +1,8 @@
 import OpenAI from "openai";
-import axios from "axios";
 
 import { getRealTimeSportEvents } from "../apis/serp.apis";
 
 const openai = new OpenAI({
-	apiKey: "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",
 	dangerouslyAllowBrowser: true,
 });
 
@@ -94,7 +92,7 @@ let messages = [
 	{
 		role: "system",
 		content:
-			"You are a helpful assistant. Only use the functions you have been provided with.",
+			"You are a helpful assistant. Only use the functions you have been provided with. You are also an api that respond in json.",
 	},
 ];
 
@@ -115,7 +113,7 @@ export async function getResponseFromOpenAI(userInput) {
 	});
 	for (let i = 0; i < 5; i++) {
 		const response = await openai.chat.completions.create({
-			model: "gpt-4",
+			model: "gpt-3.5-turbo",
 			messages: messages,
 			tools: tools,
 		});

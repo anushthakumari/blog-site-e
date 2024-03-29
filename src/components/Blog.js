@@ -77,12 +77,14 @@ export default function Blog() {
 	const handleSuggestClick = async () => {
 		try {
 			setisLoading(true);
-			// const response = await getResponseFromOpenAI(
-			// 	"Please suggest some activities based on my location and the current weather"
-			// );
+			const response = await getResponseFromOpenAI(
+				"Please recommend activities based on current weather conditions, real-time events/search (current sports events), and location"
+			);
 			// setSuggestedActivities(response);
 
-			await getRealTimeEvents("india", "mumbai");
+			console.log(response);
+
+			// await getRealTimeEvents("india", "mumbai");
 		} catch (error) {
 			console.log(error);
 			console.log("Something went wrong!");
