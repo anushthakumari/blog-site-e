@@ -14,6 +14,7 @@ import {
 } from "@mui/icons-material";
 import { Box, TextField } from "@mui/material";
 import { usePosts } from "./Context/PostContext";
+import axios from "axios";
 
 function Header(props) {
 	const { sections, title, setPostList } = props;
@@ -50,7 +51,13 @@ function Header(props) {
 	}
 
 	function handleSearch() {
-		// TODO: Implement Search
+		axios
+			.get(`http://localhost:5000/search?title=${searchInp}`)
+			.then((res) => {
+				setPostList(res.data);
+			})
+			.catch(console.log);
+
 		// setPostList(
 		//   searchInp
 		//     ? (state) => state.filter((post) => post.title.includes(searchInp))

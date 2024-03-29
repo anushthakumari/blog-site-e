@@ -16,6 +16,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "faker": "^6.6.6",
     "markdown-to-jsx": "^7.3.2",
     "openai": "^4.29.2",

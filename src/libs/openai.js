@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import { getRealTimeSportEvents } from "../apis/serp.apis";
 
 const openai = new OpenAI({
+	apiKey: "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",
 	dangerouslyAllowBrowser: true,
 });
 
